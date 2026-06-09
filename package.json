@@ -1,0 +1,22 @@
+{
+  "name": "transfer-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.0.12",
+    "vite-plugin-node-polyfills": "^0.28.0"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "html5-qrcode": "^2.3.8",
+    "localforage": "^1.10.0",
+    "qr-code-styling": "^1.9.2",
+    "simple-peer": "^9.11.1"
+  }
+}
