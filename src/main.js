@@ -11,7 +11,7 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div style="display: flex; align-items: center; gap: 0.5rem;">
         <div class="status-indicator" id="connection-status"></div>
-        <span id="connection-text" style="color: var(--text-muted); font-size: 0.875rem;">Waiting for connection...</span>
+        <span id="connection-text" aria-live="polite" style="color: var(--text-muted); font-size: 0.875rem;">Waiting for connection...</span>
       </div>
     </header>
 
@@ -49,7 +49,7 @@ document.querySelector('#app').innerHTML = `
         <div class="progress-container hidden" id="progress-container">
           <div class="progress-bar" id="progress-bar"></div>
         </div>
-        <div id="transfer-status" style="text-align: center; font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;"></div>
+        <div id="transfer-status" aria-live="polite" style="text-align: center; font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;"></div>
 
         <h3 style="margin-top: 2rem; margin-bottom: 0;">Transfer History</h3>
         <div class="history-list" id="history-list">
@@ -65,9 +65,9 @@ document.querySelector('#app').innerHTML = `
         </div>
         <p style="color: var(--text-muted); font-size: 0.875rem;">Premium features for advanced synchronization.</p>
         <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
-          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: not-allowed;"><input type="checkbox" disabled> Clipboard Sync</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: not-allowed;"><input type="checkbox" disabled> Auto Folder Sync</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: not-allowed;"><input type="checkbox" disabled> Share Wi-Fi Credentials</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: not-allowed;"><input type="checkbox" disabled title="Pro feature coming soon"> Clipboard Sync</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: not-allowed;"><input type="checkbox" disabled title="Pro feature coming soon"> Auto Folder Sync</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: not-allowed;"><input type="checkbox" disabled title="Pro feature coming soon"> Share Wi-Fi Credentials</label>
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@ document.querySelector('#app').innerHTML = `
     <div class="modal-content glass-panel">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
         <h2>Scan Peer QR Code</h2>
-        <button id="btn-close-scanner" style="background:transparent; border:none; color:white; padding: 0.5rem; border-radius: 50%;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        <button id="btn-close-scanner" aria-label="Close scanner" title="Close scanner" style="background:transparent; border:none; color:white; padding: 0.5rem; border-radius: 50%;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
       </div>
       <div id="reader"></div>
     </div>
